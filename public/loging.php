@@ -6,6 +6,8 @@ $DB = null;
 $logingV = new loging($DB);
 $userData = $logingV->getUserDataFromDB(1234);
 
+//cerramos la db
+//mysqli_close(DB);
 
 //datos para la vista en formato array
 $model = [
