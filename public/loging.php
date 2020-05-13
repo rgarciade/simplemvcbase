@@ -6,8 +6,9 @@ include_once __DIR__."/../commonfucntions/mvcpreview.php";
 //creamos db ejemplo
 $DB = null;
 $menuV = new menu();
+$menuV->ActualSelected('LOGING');
 $logingV = new loging($DB);
-$mvcPreview = new mvcPreview('logiong');
+$mvcPreview = new mvcPreview('loging');
 $userData = $logingV->getUserDataFromDB(1234);
 
 //cerramos la db
