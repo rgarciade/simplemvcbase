@@ -35,7 +35,7 @@ class mvcPreview {
         }
         if($jsRoutes){
             for ($i=0; $i < count($jsRoutes) ; $i++) { 
-                 $js .= "<script src='../public/js/".$jsRoutes[$i].".js'></script>'>";
+                $js .= "<script src='../public/js/".$jsRoutes[$i].".js'></script>";
             }
         }
         if($views){
