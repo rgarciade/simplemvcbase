@@ -5,10 +5,15 @@ include_once __DIR__."/../commonfucntions/mvcpreview.php";
 
 //creamos db ejemplo
 $DB = null;
-$menuV = new menu();
-$menuV->ActualSelected('LOGING');
-$logingV = new loging($DB);
 $mvcPreview = new mvcPreview('loging');
+
+//menu
+$menuV = new menu();
+$menuV->ActualSelected('loging');
+$menuV->fillView();
+
+//loging
+$logingV = new loging($DB);
 $userData = $logingV->getUserDataFromDB(1234);
 
 //cerramos la db
@@ -20,8 +25,7 @@ $model = [
     'SURNAME' => $userData['surname']
 ];
 
-$menuV->fillView();
 $logingV->fillview($model);
 
-
+//pintar
 $mvcPreview->composeAndPreview([$menuV,$logingV]);
