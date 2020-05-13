@@ -23,4 +23,4 @@ $model = [
 $logingV->fillview($model);
 
 //pintar
-$mvcPreview->composeAndPreview([$logingV],null,['aa']);
+$mvcPreview->composeAndPreview([$logingV]);
