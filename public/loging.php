@@ -13,5 +13,5 @@ $model = [
     'SURNAME' => $userData['surname']
 ];
 
-$logingV->fillView($model,false);
+$logingV->fillView($model);
 $logingV->printView();

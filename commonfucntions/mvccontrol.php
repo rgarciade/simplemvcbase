@@ -21,7 +21,7 @@ class mvc {
         $this->DB = $DB;
         $this->viewName = ($viewName)? $viewName : get_class($this);
     }
-    public function fillView( array $model, $commonHtml = true, $title = false, $footter = null){
+    public function fillView( array $model, $commonHtml = false, $title = false, $footter = null){
         $this->commonHtml = $commonHtml;
         $content = file_get_contents(__DIR__."/../views/".$this->viewName.".html");
         foreach ($model as $key => $value) {
